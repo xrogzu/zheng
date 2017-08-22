@@ -1,5 +1,6 @@
 package com.zheng.upms.rpc.service.impl;
 
+import com.zheng.common.annotation.BaseService;
 import com.zheng.common.base.BaseServiceImpl;
 import com.zheng.upms.dao.mapper.UpmsSystemMapper;
 import com.zheng.upms.dao.model.UpmsSystem;
@@ -12,11 +13,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * 系统service实现
- * Created by shuzheng on 2016/12/18.
- */
+* UpmsSystemService实现
+* Created by shuzheng on 2017/3/20.
+*/
 @Service
 @Transactional
+@BaseService
 public class UpmsSystemServiceImpl extends BaseServiceImpl<UpmsSystemMapper, UpmsSystem, UpmsSystemExample> implements UpmsSystemService {
 
     private static Logger _log = LoggerFactory.getLogger(UpmsSystemServiceImpl.class);

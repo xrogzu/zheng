@@ -3,13 +3,26 @@ package com.zheng.upms.dao.model;
 import java.io.Serializable;
 
 public class UpmsUserRole implements Serializable {
+    /**
+     * 编号
+     *
+     * @mbg.generated
+     */
     private Integer userRoleId;
 
+    /**
+     * 用户编号
+     *
+     * @mbg.generated
+     */
     private Integer userId;
 
+    /**
+     * 角色编号
+     *
+     * @mbg.generated
+     */
     private Integer roleId;
-
-    private Integer role;
 
     private static final long serialVersionUID = 1L;
 
@@ -37,14 +50,6 @@ public class UpmsUserRole implements Serializable {
         this.roleId = roleId;
     }
 
-    public Integer getRole() {
-        return role;
-    }
-
-    public void setRole(Integer role) {
-        this.role = role;
-    }
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -54,7 +59,6 @@ public class UpmsUserRole implements Serializable {
         sb.append(", userRoleId=").append(userRoleId);
         sb.append(", userId=").append(userId);
         sb.append(", roleId=").append(roleId);
-        sb.append(", role=").append(role);
         sb.append("]");
         return sb.toString();
     }
@@ -73,8 +77,7 @@ public class UpmsUserRole implements Serializable {
         UpmsUserRole other = (UpmsUserRole) that;
         return (this.getUserRoleId() == null ? other.getUserRoleId() == null : this.getUserRoleId().equals(other.getUserRoleId()))
             && (this.getUserId() == null ? other.getUserId() == null : this.getUserId().equals(other.getUserId()))
-            && (this.getRoleId() == null ? other.getRoleId() == null : this.getRoleId().equals(other.getRoleId()))
-            && (this.getRole() == null ? other.getRole() == null : this.getRole().equals(other.getRole()));
+            && (this.getRoleId() == null ? other.getRoleId() == null : this.getRoleId().equals(other.getRoleId()));
     }
 
     @Override
@@ -84,7 +87,6 @@ public class UpmsUserRole implements Serializable {
         result = prime * result + ((getUserRoleId() == null) ? 0 : getUserRoleId().hashCode());
         result = prime * result + ((getUserId() == null) ? 0 : getUserId().hashCode());
         result = prime * result + ((getRoleId() == null) ? 0 : getRoleId().hashCode());
-        result = prime * result + ((getRole() == null) ? 0 : getRole().hashCode());
         return result;
     }
 }

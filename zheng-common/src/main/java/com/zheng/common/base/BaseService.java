@@ -24,6 +24,18 @@ public interface BaseService<Record, Example> {
 
 	List<Record> selectByExample(Example example);
 
+	List<Record> selectByExampleWithBLOBsForStartPage(Example example, Integer pageNum, Integer pageSize);
+
+	List<Record> selectByExampleForStartPage(Example example, Integer pageNum, Integer pageSize);
+
+	List<Record> selectByExampleWithBLOBsForOffsetPage(Example example, Integer offset, Integer limit);
+
+	List<Record> selectByExampleForOffsetPage(Example example, Integer offset, Integer limit);
+
+	Record selectFirstByExample(Example example);
+
+	Record selectFirstByExampleWithBLOBs(Example example);
+
 	Record selectByPrimaryKey(Integer id);
 
 	int updateByExampleSelective(@Param("record") Record record, @Param("example") Example example);
@@ -39,8 +51,6 @@ public interface BaseService<Record, Example> {
 	int updateByPrimaryKey(Record record);
 
 	int deleteByPrimaryKeys(String ids);
-
-	//void initMapper(Class clazz);
 
 	void initMapper();
 

@@ -13,10 +13,6 @@ public class UpmsRoleExample implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private Integer limit;
-
-    private Integer offset;
-
     public UpmsRoleExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
@@ -68,22 +64,6 @@ public class UpmsRoleExample implements Serializable {
         oredCriteria.clear();
         orderByClause = null;
         distinct = false;
-    }
-
-    public void setLimit(Integer limit) {
-        this.limit = limit;
-    }
-
-    public Integer getLimit() {
-        return limit;
-    }
-
-    public void setOffset(Integer offset) {
-        this.offset = offset;
-    }
-
-    public Integer getOffset() {
-        return offset;
     }
 
     protected abstract static class GeneratedCriteria implements Serializable {
@@ -187,66 +167,6 @@ public class UpmsRoleExample implements Serializable {
             return (Criteria) this;
         }
 
-        public Criteria andSystemIdIsNull() {
-            addCriterion("system_id is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andSystemIdIsNotNull() {
-            addCriterion("system_id is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andSystemIdEqualTo(Integer value) {
-            addCriterion("system_id =", value, "systemId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSystemIdNotEqualTo(Integer value) {
-            addCriterion("system_id <>", value, "systemId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSystemIdGreaterThan(Integer value) {
-            addCriterion("system_id >", value, "systemId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSystemIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("system_id >=", value, "systemId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSystemIdLessThan(Integer value) {
-            addCriterion("system_id <", value, "systemId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSystemIdLessThanOrEqualTo(Integer value) {
-            addCriterion("system_id <=", value, "systemId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSystemIdIn(List<Integer> values) {
-            addCriterion("system_id in", values, "systemId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSystemIdNotIn(List<Integer> values) {
-            addCriterion("system_id not in", values, "systemId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSystemIdBetween(Integer value1, Integer value2) {
-            addCriterion("system_id between", value1, value2, "systemId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSystemIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("system_id not between", value1, value2, "systemId");
-            return (Criteria) this;
-        }
-
         public Criteria andNameIsNull() {
             addCriterion("name is null");
             return (Criteria) this;
@@ -317,6 +237,76 @@ public class UpmsRoleExample implements Serializable {
             return (Criteria) this;
         }
 
+        public Criteria andTitleIsNull() {
+            addCriterion("title is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTitleIsNotNull() {
+            addCriterion("title is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTitleEqualTo(String value) {
+            addCriterion("title =", value, "title");
+            return (Criteria) this;
+        }
+
+        public Criteria andTitleNotEqualTo(String value) {
+            addCriterion("title <>", value, "title");
+            return (Criteria) this;
+        }
+
+        public Criteria andTitleGreaterThan(String value) {
+            addCriterion("title >", value, "title");
+            return (Criteria) this;
+        }
+
+        public Criteria andTitleGreaterThanOrEqualTo(String value) {
+            addCriterion("title >=", value, "title");
+            return (Criteria) this;
+        }
+
+        public Criteria andTitleLessThan(String value) {
+            addCriterion("title <", value, "title");
+            return (Criteria) this;
+        }
+
+        public Criteria andTitleLessThanOrEqualTo(String value) {
+            addCriterion("title <=", value, "title");
+            return (Criteria) this;
+        }
+
+        public Criteria andTitleLike(String value) {
+            addCriterion("title like", value, "title");
+            return (Criteria) this;
+        }
+
+        public Criteria andTitleNotLike(String value) {
+            addCriterion("title not like", value, "title");
+            return (Criteria) this;
+        }
+
+        public Criteria andTitleIn(List<String> values) {
+            addCriterion("title in", values, "title");
+            return (Criteria) this;
+        }
+
+        public Criteria andTitleNotIn(List<String> values) {
+            addCriterion("title not in", values, "title");
+            return (Criteria) this;
+        }
+
+        public Criteria andTitleBetween(String value1, String value2) {
+            addCriterion("title between", value1, value2, "title");
+            return (Criteria) this;
+        }
+
+        public Criteria andTitleNotBetween(String value1, String value2) {
+            addCriterion("title not between", value1, value2, "title");
+            return (Criteria) this;
+        }
+
         public Criteria andDescriptionIsNull() {
             addCriterion("description is null");
             return (Criteria) this;
@@ -384,66 +374,6 @@ public class UpmsRoleExample implements Serializable {
 
         public Criteria andDescriptionNotBetween(String value1, String value2) {
             addCriterion("description not between", value1, value2, "description");
-            return (Criteria) this;
-        }
-
-        public Criteria andStatusIsNull() {
-            addCriterion("status is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andStatusIsNotNull() {
-            addCriterion("status is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andStatusEqualTo(Byte value) {
-            addCriterion("status =", value, "status");
-            return (Criteria) this;
-        }
-
-        public Criteria andStatusNotEqualTo(Byte value) {
-            addCriterion("status <>", value, "status");
-            return (Criteria) this;
-        }
-
-        public Criteria andStatusGreaterThan(Byte value) {
-            addCriterion("status >", value, "status");
-            return (Criteria) this;
-        }
-
-        public Criteria andStatusGreaterThanOrEqualTo(Byte value) {
-            addCriterion("status >=", value, "status");
-            return (Criteria) this;
-        }
-
-        public Criteria andStatusLessThan(Byte value) {
-            addCriterion("status <", value, "status");
-            return (Criteria) this;
-        }
-
-        public Criteria andStatusLessThanOrEqualTo(Byte value) {
-            addCriterion("status <=", value, "status");
-            return (Criteria) this;
-        }
-
-        public Criteria andStatusIn(List<Byte> values) {
-            addCriterion("status in", values, "status");
-            return (Criteria) this;
-        }
-
-        public Criteria andStatusNotIn(List<Byte> values) {
-            addCriterion("status not in", values, "status");
-            return (Criteria) this;
-        }
-
-        public Criteria andStatusBetween(Byte value1, Byte value2) {
-            addCriterion("status between", value1, value2, "status");
-            return (Criteria) this;
-        }
-
-        public Criteria andStatusNotBetween(Byte value1, Byte value2) {
-            addCriterion("status not between", value1, value2, "status");
             return (Criteria) this;
         }
 

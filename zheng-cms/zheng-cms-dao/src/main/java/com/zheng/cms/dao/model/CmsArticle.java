@@ -11,6 +11,13 @@ public class CmsArticle implements Serializable {
     private Integer articleId;
 
     /**
+     * 所属专题
+     *
+     * @mbg.generated
+     */
+    private Integer topicId;
+
+    /**
      * 文章标题
      *
      * @mbg.generated
@@ -88,6 +95,20 @@ public class CmsArticle implements Serializable {
     private Integer readnumber;
 
     /**
+     * 置顶等级
+     *
+     * @mbg.generated
+     */
+    private Integer top;
+
+    /**
+     * 所属系统
+     *
+     * @mbg.generated
+     */
+    private Integer systemId;
+
+    /**
      * 创建时间
      *
      * @mbg.generated
@@ -116,6 +137,14 @@ public class CmsArticle implements Serializable {
 
     public void setArticleId(Integer articleId) {
         this.articleId = articleId;
+    }
+
+    public Integer getTopicId() {
+        return topicId;
+    }
+
+    public void setTopicId(Integer topicId) {
+        this.topicId = topicId;
     }
 
     public String getTitle() {
@@ -206,6 +235,22 @@ public class CmsArticle implements Serializable {
         this.readnumber = readnumber;
     }
 
+    public Integer getTop() {
+        return top;
+    }
+
+    public void setTop(Integer top) {
+        this.top = top;
+    }
+
+    public Integer getSystemId() {
+        return systemId;
+    }
+
+    public void setSystemId(Integer systemId) {
+        this.systemId = systemId;
+    }
+
     public Long getCtime() {
         return ctime;
     }
@@ -237,6 +282,7 @@ public class CmsArticle implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", articleId=").append(articleId);
+        sb.append(", topicId=").append(topicId);
         sb.append(", title=").append(title);
         sb.append(", author=").append(author);
         sb.append(", fromurl=").append(fromurl);
@@ -248,6 +294,8 @@ public class CmsArticle implements Serializable {
         sb.append(", status=").append(status);
         sb.append(", userId=").append(userId);
         sb.append(", readnumber=").append(readnumber);
+        sb.append(", top=").append(top);
+        sb.append(", systemId=").append(systemId);
         sb.append(", ctime=").append(ctime);
         sb.append(", orders=").append(orders);
         sb.append(", content=").append(content);
@@ -268,6 +316,7 @@ public class CmsArticle implements Serializable {
         }
         CmsArticle other = (CmsArticle) that;
         return (this.getArticleId() == null ? other.getArticleId() == null : this.getArticleId().equals(other.getArticleId()))
+            && (this.getTopicId() == null ? other.getTopicId() == null : this.getTopicId().equals(other.getTopicId()))
             && (this.getTitle() == null ? other.getTitle() == null : this.getTitle().equals(other.getTitle()))
             && (this.getAuthor() == null ? other.getAuthor() == null : this.getAuthor().equals(other.getAuthor()))
             && (this.getFromurl() == null ? other.getFromurl() == null : this.getFromurl().equals(other.getFromurl()))
@@ -279,6 +328,8 @@ public class CmsArticle implements Serializable {
             && (this.getStatus() == null ? other.getStatus() == null : this.getStatus().equals(other.getStatus()))
             && (this.getUserId() == null ? other.getUserId() == null : this.getUserId().equals(other.getUserId()))
             && (this.getReadnumber() == null ? other.getReadnumber() == null : this.getReadnumber().equals(other.getReadnumber()))
+            && (this.getTop() == null ? other.getTop() == null : this.getTop().equals(other.getTop()))
+            && (this.getSystemId() == null ? other.getSystemId() == null : this.getSystemId().equals(other.getSystemId()))
             && (this.getCtime() == null ? other.getCtime() == null : this.getCtime().equals(other.getCtime()))
             && (this.getOrders() == null ? other.getOrders() == null : this.getOrders().equals(other.getOrders()))
             && (this.getContent() == null ? other.getContent() == null : this.getContent().equals(other.getContent()));
@@ -289,6 +340,7 @@ public class CmsArticle implements Serializable {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((getArticleId() == null) ? 0 : getArticleId().hashCode());
+        result = prime * result + ((getTopicId() == null) ? 0 : getTopicId().hashCode());
         result = prime * result + ((getTitle() == null) ? 0 : getTitle().hashCode());
         result = prime * result + ((getAuthor() == null) ? 0 : getAuthor().hashCode());
         result = prime * result + ((getFromurl() == null) ? 0 : getFromurl().hashCode());
@@ -300,6 +352,8 @@ public class CmsArticle implements Serializable {
         result = prime * result + ((getStatus() == null) ? 0 : getStatus().hashCode());
         result = prime * result + ((getUserId() == null) ? 0 : getUserId().hashCode());
         result = prime * result + ((getReadnumber() == null) ? 0 : getReadnumber().hashCode());
+        result = prime * result + ((getTop() == null) ? 0 : getTop().hashCode());
+        result = prime * result + ((getSystemId() == null) ? 0 : getSystemId().hashCode());
         result = prime * result + ((getCtime() == null) ? 0 : getCtime().hashCode());
         result = prime * result + ((getOrders() == null) ? 0 : getOrders().hashCode());
         result = prime * result + ((getContent() == null) ? 0 : getContent().hashCode());
